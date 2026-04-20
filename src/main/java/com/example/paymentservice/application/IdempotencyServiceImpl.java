@@ -43,4 +43,14 @@ public class IdempotencyServiceImpl implements IdempotencyService {
         idempotencyKey.setStatusCode(statusCode);
         idempotencyRepository.save(idempotencyKey);
     }
+
+    @Override
+    @Transactional
+    public void releaseKey(String key) {
+        idempotencyRepository.findById(key).ifPresent(idempotencyKey -> {
+            if (idempotencyKey.getStatus() == IdempotencyKeyStatus.PENDING) {
+                idempotencyRepository.deleteById(key);
+            }
+        });
+    }
 }

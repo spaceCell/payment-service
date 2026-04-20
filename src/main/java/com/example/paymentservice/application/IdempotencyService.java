@@ -11,4 +11,6 @@ public interface IdempotencyService {
     Optional<IdempotencyKey> getByKey(String key);
 
     void markAsCompleted(String key, String response, int statusCode);
+
+    void releaseKey(String key);
 }

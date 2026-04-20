@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -97,6 +98,11 @@ public class IdempotencyInterceptor implements HandlerInterceptor {
 
         String responseBody = new String(wrappedResponse.getContentAsByteArray(),
                 wrappedResponse.getCharacterEncoding());
-        idempotencyService.markAsCompleted(key, responseBody, response.getStatus());
+        HttpStatusCode statusCode = HttpStatusCode.valueOf(response.getStatus());
+        if (statusCode.is2xxSuccessful()) {
+            idempotencyService.markAsCompleted(key, responseBody, response.getStatus());
+            return;
+        }
+        idempotencyService.releaseKey(key);
     }
 }
