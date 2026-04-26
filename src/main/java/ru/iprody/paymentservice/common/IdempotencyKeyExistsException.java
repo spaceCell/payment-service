@@ -1,4 +1,4 @@
-package com.example.paymentservice.common;
+package ru.iprody.paymentservice.common;
 
 public class IdempotencyKeyExistsException extends RuntimeException {
 

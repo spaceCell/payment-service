@@ -1,19 +1,19 @@
-package com.example.paymentservice.integration.order.messaging;
+package ru.iprody.paymentservice.integration.order.messaging;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Component;
-import com.example.paymentservice.application.PaymentApplicationService;
-import com.example.paymentservice.application.command.PaymentCommand;
-import com.example.paymentservice.application.dto.PaymentAmountDetails;
-import com.example.paymentservice.application.dto.PaymentDetails;
-import com.example.paymentservice.domain.model.PaymentMethod;
-import com.example.paymentservice.domain.model.PaymentStatus;
-import com.example.paymentservice.integration.order.messaging.config.PaymentRabbitMqProperties;
-import com.example.paymentservice.integration.order.messaging.dto.PaymentRequestMessage;
-import com.example.paymentservice.integration.order.messaging.dto.PaymentResultMessage;
+import ru.iprody.paymentservice.application.PaymentApplicationService;
+import ru.iprody.paymentservice.application.command.PaymentCommand;
+import ru.iprody.paymentservice.application.dto.PaymentAmountDetails;
+import ru.iprody.paymentservice.application.dto.PaymentDetails;
+import ru.iprody.paymentservice.domain.model.PaymentMethod;
+import ru.iprody.paymentservice.domain.model.PaymentStatus;
+import ru.iprody.paymentservice.integration.order.messaging.config.PaymentRabbitMqProperties;
+import ru.iprody.paymentservice.integration.order.messaging.dto.PaymentRequestMessage;
+import ru.iprody.paymentservice.integration.order.messaging.dto.PaymentResultMessage;
 
 @Slf4j
 @Component

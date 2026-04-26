@@ -1,4 +1,4 @@
-package com.example.paymentservice.common;
+package ru.iprody.paymentservice.common;
 
 import java.time.LocalDateTime;
 

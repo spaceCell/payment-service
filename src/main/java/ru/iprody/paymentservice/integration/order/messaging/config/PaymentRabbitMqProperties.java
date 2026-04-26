@@ -1,4 +1,4 @@
-package com.example.paymentservice.integration.order.messaging.config;
+package ru.iprody.paymentservice.integration.order.messaging.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

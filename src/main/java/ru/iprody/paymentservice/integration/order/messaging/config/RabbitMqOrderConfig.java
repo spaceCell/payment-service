@@ -1,4 +1,4 @@
-package com.example.paymentservice.integration.order.messaging.config;
+package ru.iprody.paymentservice.integration.order.messaging.config;
 
 import java.util.Map;
 
@@ -15,8 +15,8 @@ import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import com.example.paymentservice.integration.order.messaging.dto.PaymentRequestMessage;
-import com.example.paymentservice.integration.order.messaging.dto.PaymentResultMessage;
+import ru.iprody.paymentservice.integration.order.messaging.dto.PaymentRequestMessage;
+import ru.iprody.paymentservice.integration.order.messaging.dto.PaymentResultMessage;
 
 @Configuration
 @EnableConfigurationProperties(PaymentRabbitMqProperties.class)
