@@ -29,3 +29,10 @@ services:
     depends_on:
       rabbitmq:
         condition: service_healthy
+    networks:
+      - default
+      - shared-services
+
+networks:
+  shared-services:
+    external: true
