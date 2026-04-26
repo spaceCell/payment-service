@@ -1,6 +1,6 @@
-package com.example.paymentservice.application;
+package ru.iprody.paymentservice.application;
 
-import com.example.paymentservice.domain.model.IdempotencyKey;
+import ru.iprody.paymentservice.domain.model.IdempotencyKey;
 
 import java.util.Optional;
 
@@ -11,6 +11,4 @@ public interface IdempotencyService {
     Optional<IdempotencyKey> getByKey(String key);
 
     void markAsCompleted(String key, String response, int statusCode);
-
-    void releaseKey(String key);
 }

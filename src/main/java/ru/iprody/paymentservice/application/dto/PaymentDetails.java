@@ -1,9 +1,9 @@
-package com.example.paymentservice.application.dto;
+package ru.iprody.paymentservice.application.dto;
 
 import java.time.LocalDateTime;
 
-import com.example.paymentservice.domain.model.PaymentMethod;
-import com.example.paymentservice.domain.model.PaymentStatus;
+import ru.iprody.paymentservice.domain.model.PaymentMethod;
+import ru.iprody.paymentservice.domain.model.PaymentStatus;
 
 public record PaymentDetails(
         Long id,

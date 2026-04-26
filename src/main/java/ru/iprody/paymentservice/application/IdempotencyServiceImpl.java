@@ -1,14 +1,14 @@
-package com.example.paymentservice.application;
+package ru.iprody.paymentservice.application;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.example.paymentservice.common.IdempotencyKeyExistsException;
-import com.example.paymentservice.domain.model.IdempotencyKey;
-import com.example.paymentservice.domain.model.IdempotencyKeyStatus;
-import com.example.paymentservice.domain.repository.IdempotencyRepository;
+import ru.iprody.paymentservice.common.IdempotencyKeyExistsException;
+import ru.iprody.paymentservice.domain.model.IdempotencyKey;
+import ru.iprody.paymentservice.domain.model.IdempotencyKeyStatus;
+import ru.iprody.paymentservice.domain.repository.IdempotencyRepository;
 
 import java.util.Optional;
 
@@ -42,15 +42,5 @@ public class IdempotencyServiceImpl implements IdempotencyService {
         idempotencyKey.setResponse(response);
         idempotencyKey.setStatusCode(statusCode);
         idempotencyRepository.save(idempotencyKey);
-    }
-
-    @Override
-    @Transactional
-    public void releaseKey(String key) {
-        idempotencyRepository.findById(key).ifPresent(idempotencyKey -> {
-            if (idempotencyKey.getStatus() == IdempotencyKeyStatus.PENDING) {
-                idempotencyRepository.deleteById(key);
-            }
-        });
     }
 }

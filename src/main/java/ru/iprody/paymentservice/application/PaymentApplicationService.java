@@ -1,4 +1,4 @@
-package com.example.paymentservice.application;
+package ru.iprody.paymentservice.application;
 
 import java.util.List;
 
@@ -6,13 +6,13 @@ import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.example.paymentservice.application.command.PaymentCommand;
-import com.example.paymentservice.application.dto.PaymentAmountDetails;
-import com.example.paymentservice.application.dto.PaymentDetails;
-import com.example.paymentservice.common.ResourceNotFoundException;
-import com.example.paymentservice.domain.model.Payment;
-import com.example.paymentservice.domain.model.PaymentAmount;
-import com.example.paymentservice.domain.repository.PaymentRepository;
+import ru.iprody.paymentservice.application.command.PaymentCommand;
+import ru.iprody.paymentservice.application.dto.PaymentAmountDetails;
+import ru.iprody.paymentservice.application.dto.PaymentDetails;
+import ru.iprody.paymentservice.common.ResourceNotFoundException;
+import ru.iprody.paymentservice.domain.model.Payment;
+import ru.iprody.paymentservice.domain.model.PaymentAmount;
+import ru.iprody.paymentservice.domain.repository.PaymentRepository;
 
 @Service
 @RequiredArgsConstructor
