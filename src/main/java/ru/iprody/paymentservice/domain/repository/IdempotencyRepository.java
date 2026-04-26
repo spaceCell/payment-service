@@ -1,10 +1,10 @@
-package com.example.paymentservice.domain.repository;
+package ru.iprody.paymentservice.domain.repository;
 
 import jakarta.persistence.LockModeType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Lock;
 import org.springframework.lang.NonNull;
-import com.example.paymentservice.domain.model.IdempotencyKey;
+import ru.iprody.paymentservice.domain.model.IdempotencyKey;
 
 import java.util.Optional;
 

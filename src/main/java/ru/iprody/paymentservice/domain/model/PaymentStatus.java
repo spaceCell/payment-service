@@ -1,4 +1,4 @@
-package com.example.paymentservice.domain.model;
+package ru.iprody.paymentservice.domain.model;
 
 public enum PaymentStatus {
     PENDING,
