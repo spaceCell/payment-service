@@ -1,4 +1,4 @@
-package com.example.paymentservice.web;
+package ru.iprody.paymentservice.web;
 
 import java.util.List;
 
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.paymentservice.application.PaymentApplicationService;
-import com.example.paymentservice.web.dto.PaymentRequest;
-import com.example.paymentservice.web.dto.PaymentResponse;
-import com.example.paymentservice.web.mapper.PaymentWebMapper;
+import ru.iprody.paymentservice.application.PaymentApplicationService;
+import ru.iprody.paymentservice.web.dto.PaymentRequest;
+import ru.iprody.paymentservice.web.dto.PaymentResponse;
+import ru.iprody.paymentservice.web.mapper.PaymentWebMapper;
 
 @RestController
 @RequestMapping("/api/payments")

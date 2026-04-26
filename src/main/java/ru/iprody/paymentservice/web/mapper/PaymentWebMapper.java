@@ -1,13 +1,13 @@
-package com.example.paymentservice.web.mapper;
+package ru.iprody.paymentservice.web.mapper;
 
 import org.springframework.stereotype.Component;
-import com.example.paymentservice.application.command.PaymentCommand;
-import com.example.paymentservice.application.dto.PaymentAmountDetails;
-import com.example.paymentservice.application.dto.PaymentDetails;
-import com.example.paymentservice.web.dto.PaymentAmountRequest;
-import com.example.paymentservice.web.dto.PaymentAmountResponse;
-import com.example.paymentservice.web.dto.PaymentRequest;
-import com.example.paymentservice.web.dto.PaymentResponse;
+import ru.iprody.paymentservice.application.command.PaymentCommand;
+import ru.iprody.paymentservice.application.dto.PaymentAmountDetails;
+import ru.iprody.paymentservice.application.dto.PaymentDetails;
+import ru.iprody.paymentservice.web.dto.PaymentAmountRequest;
+import ru.iprody.paymentservice.web.dto.PaymentAmountResponse;
+import ru.iprody.paymentservice.web.dto.PaymentRequest;
+import ru.iprody.paymentservice.web.dto.PaymentResponse;
 
 @Component
 public class PaymentWebMapper {

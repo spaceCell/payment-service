@@ -1,4 +1,4 @@
-package com.example.paymentservice.web;
+package ru.iprody.paymentservice.web;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import com.example.paymentservice.web.dto.PaymentRequest;
-import com.example.paymentservice.web.dto.PaymentResponse;
+import ru.iprody.paymentservice.web.dto.PaymentRequest;
+import ru.iprody.paymentservice.web.dto.PaymentResponse;
 
 @Tag(name = "Payments", description = "Операции с платежами")
 public interface PaymentApi {

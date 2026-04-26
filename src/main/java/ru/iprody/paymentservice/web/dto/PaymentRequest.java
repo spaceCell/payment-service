@@ -1,10 +1,10 @@
-package com.example.paymentservice.web.dto;
+package ru.iprody.paymentservice.web.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.example.paymentservice.domain.model.PaymentMethod;
-import com.example.paymentservice.domain.model.PaymentStatus;
+import ru.iprody.paymentservice.domain.model.PaymentMethod;
+import ru.iprody.paymentservice.domain.model.PaymentStatus;
 
 @Data
 @NoArgsConstructor

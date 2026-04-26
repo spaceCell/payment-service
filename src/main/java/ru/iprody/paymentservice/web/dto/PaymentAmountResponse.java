@@ -1,17 +1,15 @@
-package com.example.paymentservice.web.dto;
+package ru.iprody.paymentservice.web.dto;
 
 import java.math.BigDecimal;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-@Schema(description = "Сумма платежа в запросе")
-public class PaymentAmountRequest {
+@Schema(description = "Сумма платежа в ответе")
+public class PaymentAmountResponse {
 
     private BigDecimal amount;
     private String currency;

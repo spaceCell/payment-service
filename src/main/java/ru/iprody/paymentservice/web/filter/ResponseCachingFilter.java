@@ -1,4 +1,4 @@
-package com.example.paymentservice.web.filter;
+package ru.iprody.paymentservice.web.filter;
 
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;

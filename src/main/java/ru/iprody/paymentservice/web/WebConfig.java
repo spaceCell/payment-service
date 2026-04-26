@@ -1,10 +1,10 @@
-package com.example.paymentservice.web;
+package ru.iprody.paymentservice.web;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import com.example.paymentservice.web.interceptor.IdempotencyInterceptor;
+import ru.iprody.paymentservice.web.interceptor.IdempotencyInterceptor;
 
 @Configuration
 @RequiredArgsConstructor

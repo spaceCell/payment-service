@@ -1,12 +1,12 @@
-package com.example.paymentservice.web.dto;
+package ru.iprody.paymentservice.web.dto;
 
 import java.time.LocalDateTime;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import com.example.paymentservice.domain.model.PaymentMethod;
-import com.example.paymentservice.domain.model.PaymentStatus;
+import ru.iprody.paymentservice.domain.model.PaymentMethod;
+import ru.iprody.paymentservice.domain.model.PaymentStatus;
 
 @Data
 @AllArgsConstructor

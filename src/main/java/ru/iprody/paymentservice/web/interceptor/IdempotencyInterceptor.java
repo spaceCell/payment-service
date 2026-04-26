@@ -1,4 +1,4 @@
-package com.example.paymentservice.web.interceptor;
+package ru.iprody.paymentservice.web.interceptor;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -6,16 +6,15 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.util.ContentCachingResponseWrapper;
-import com.example.paymentservice.application.IdempotencyService;
-import com.example.paymentservice.common.IdempotencyKeyExistsException;
-import com.example.paymentservice.domain.model.IdempotencyKey;
-import com.example.paymentservice.domain.model.IdempotencyKeyStatus;
-import com.example.paymentservice.web.filter.ResponseCachingFilter;
+import ru.iprody.paymentservice.application.IdempotencyService;
+import ru.iprody.paymentservice.common.IdempotencyKeyExistsException;
+import ru.iprody.paymentservice.domain.model.IdempotencyKey;
+import ru.iprody.paymentservice.domain.model.IdempotencyKeyStatus;
+import ru.iprody.paymentservice.web.filter.ResponseCachingFilter;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -98,11 +97,6 @@ public class IdempotencyInterceptor implements HandlerInterceptor {
 
         String responseBody = new String(wrappedResponse.getContentAsByteArray(),
                 wrappedResponse.getCharacterEncoding());
-        HttpStatusCode statusCode = HttpStatusCode.valueOf(response.getStatus());
-        if (statusCode.is2xxSuccessful()) {
-            idempotencyService.markAsCompleted(key, responseBody, response.getStatus());
-            return;
-        }
-        idempotencyService.releaseKey(key);
+        idempotencyService.markAsCompleted(key, responseBody, response.getStatus());
     }
 }
