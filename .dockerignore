@@ -1,0 +1,11 @@
+.git
+.gradle
+.idea
+.cursor
+build
+out
+target
+*.iml
+*.log
+README.md
+**/.DS_Store
