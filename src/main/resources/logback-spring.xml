@@ -26,7 +26,7 @@
 
     <logger name="org.springframework.amqp" level="INFO"/>
     <logger name="io.github.resilience4j" level="DEBUG"/>
-    <logger name="com.example.paymentservice" level="DEBUG"/>
+    <logger name="ru.iprody.paymentservice" level="DEBUG"/>
 
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>
